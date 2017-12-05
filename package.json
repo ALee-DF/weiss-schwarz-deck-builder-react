@@ -23,6 +23,12 @@
   },
   "homepage": "https://github.com/ALee-DF/weiss-schwarz-deck-builder-react#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browser-sync": "^2.18.13",
+    "browserify": "^14.5.0",
     "eslint": "4.5.0",
     "eslint-config-standard": "10.2.1",
     "eslint-plugin-import": "2.7.0",
@@ -34,7 +40,8 @@
     "husky": "0.14.3",
     "npm-run-all": "4.1.1",
     "stylelint": "8.0.0",
-    "stylelint-config-standard": "17.0.0"
+    "stylelint-config-standard": "17.0.0",
+    "watchify": "^3.9.0"
   },
   "dependencies": {
     "react": "^16.2.0",
