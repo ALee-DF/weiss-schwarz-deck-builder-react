@@ -1,3 +1,15 @@
+body {
+  width: 1000px;
+  margin: 0 auto;
+}
+
 html {
   overflow-y: scroll;
+}
+
+header {
+  position: fixed;
+  height: 100px;
+  width: 1000px;
+  background-color: rgb(40, 40, 40);
 }
