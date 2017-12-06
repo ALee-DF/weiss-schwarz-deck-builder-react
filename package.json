@@ -1,0 +1,54 @@
+{
+  "name": "weiss-schwarz-deck-builder-react",
+  "version": "1.0.0",
+  "description": "Refactoring of the Weiss Schwarz Deck Builder to use React.js.",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "browserify index.js -t babelify -o main.js",
+    "sync": "browser-sync start --server --no-open --port 3000 --files ./main.js",
+    "bundle:watch": "watchify index.js -vd -t babelify -o main.js",
+    "watch": "npm-run-all --parallel bundle:watch sync",
+    "lint": "run-p lint:*",
+    "lint:html": "htmlhint ./**/*.html",
+    "lint:css": "stylelint ./**/*.css",
+    "lint:js": "eslint ./**/*.js",
+    "test": "npm run lint",
+    "precommit": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALee-DF/weiss-schwarz-deck-builder-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ALee-DF/weiss-schwarz-deck-builder-react/issues"
+  },
+  "homepage": "https://github.com/ALee-DF/weiss-schwarz-deck-builder-react#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browser-sync": "^2.18.13",
+    "browserify": "^14.5.0",
+    "eslint": "4.5.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-node": "5.1.1",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-react": "7.3.0",
+    "eslint-plugin-standard": "3.0.1",
+    "htmlhint": "0.9.13",
+    "husky": "0.14.3",
+    "npm-run-all": "4.1.1",
+    "stylelint": "8.0.0",
+    "stylelint-config-standard": "17.0.0",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
