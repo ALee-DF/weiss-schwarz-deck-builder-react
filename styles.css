@@ -13,3 +13,20 @@ header {
   width: 1000px;
   background-color: rgb(40, 40, 40);
 }
+
+#booster-packs-section {
+  width: 940px;
+  padding: 120px 30px 30px;
+  background-color: rgb(255, 255, 255);
+}
+
+.booster-pack-icon {
+  width: 170px;
+  height: 340px;
+}
+
+.button-tiles {
+  margin: 2px;
+  padding: 5px;
+  background-color: white;
+}
