@@ -25,6 +25,21 @@ button {
   background-color: rgb(255, 255, 255);
 }
 
+#cards-and-packs-buttons {
+  position: relative;
+  left: 65px;
+  bottom: 30px;
+  display: inline-block;
+}
+
+#view-cards {
+  width: 130px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: blue;
+}
+
 .booster-pack-icon {
   width: 170px;
   height: 340px;
