@@ -6,10 +6,10 @@ import { boosterPacksList } from './booster-packs-data.js'
 export default class App extends Component {
   constructor(props) {
     super(props)
-    this.handleClick = this.handleClick.bind(this)
+    this.handlePacksClick = this.handlePacksClick.bind(this)
   }
 
-  handleClick({ target }) {
+  handlePacksClick({ target }) {
     if (target.closest('button') !== null) {
       if (target.closest('button').className === 'button-tiles') {
         target.closest('button').setAttribute('class', 'pack-selected')
@@ -26,7 +26,7 @@ export default class App extends Component {
         <Header />
         <BoosterPacksSection
           boosterPacksList={boosterPacksList}
-          handleClick={this.handleClick}
+          handleClick={this.handlePacksClick}
         />
       </div>
     )
