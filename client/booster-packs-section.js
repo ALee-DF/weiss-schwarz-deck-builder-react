@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import { boosterPacksList } from './booster-packs-data.js'
+import React from 'react'
 const renderPack = ({ visual }, index) =>
   <button
     key={index}
@@ -7,14 +6,12 @@ const renderPack = ({ visual }, index) =>
     <img className='booster-pack-icon' src={visual} />
   </button>
 
-export default class BoosterPacksSection extends Component {
-  render() {
-    return (
-      <section id='booster-packs-section'>
-        {
-          boosterPacksList.map(renderPack)
-        }
-      </section>
-    )
-  }
+export default function BoosterPacksSection({ boosterPacksList, handleClick }) {
+  return (
+    <section id='booster-packs-section' onClick={handleClick}>
+      {
+        boosterPacksList.map(renderPack)
+      }
+    </section>
+  )
 }
