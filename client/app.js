@@ -49,6 +49,7 @@ export default class App extends Component {
           ]
         }, [])
       })
+      document.querySelector('#booster-packs-section').classList.add('hidden')
       document.querySelector('#card-list-section').classList.remove('hidden')
     }
   }
