@@ -1,8 +1,9 @@
 import React from 'react'
-const renderPack = ({ visual }, index) =>
+const renderPack = ({ expansion, visual }, index) =>
   <button
     key={index}
-    className='button-tiles'>
+    className='button-tiles'
+    expansion={expansion}>
     <img className='booster-pack-icon' src={visual} />
   </button>
 
