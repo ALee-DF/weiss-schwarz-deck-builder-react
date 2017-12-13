@@ -1,0 +1,112 @@
+body {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: rgb(243, 243, 243);
+}
+
+html {
+  overflow-y: scroll;
+}
+
+header {
+  position: fixed;
+  height: 100px;
+  width: 1000px;
+  background-color: rgb(40, 40, 40);
+}
+
+button {
+  outline: none;
+}
+
+#booster-packs-section {
+  width: 940px;
+  padding: 120px 30px 30px;
+  background-color: rgb(255, 255, 255);
+}
+
+#cards-and-packs-buttons {
+  position: relative;
+  left: 65px;
+  bottom: 30px;
+  display: inline-block;
+}
+
+#view-cards {
+  width: 130px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: blue;
+}
+
+#view-packs {
+  width: 130px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: red;
+}
+
+#card-list-section {
+  margin: 0;
+  padding: 100px 20px 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.booster-pack-icon {
+  width: 170px;
+  height: 340px;
+}
+
+.button-tiles {
+  margin: 2px;
+  padding: 5px;
+  background-color: white;
+}
+
+.pack-selected {
+  margin: 2px;
+  padding: 5px;
+  background-color: rgb(0, 142, 0);
+}
+
+.card-icons {
+  display: inline-block;
+  width: 220px;
+  height: 308px;
+  margin: 5px;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0 3px 5px black;
+  text-align: center;
+}
+
+.climax-card-icons {
+  display: inline-block;
+  width: 300;
+  height: 214px;
+  margin: 5px;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0 3px 5px black;
+  text-align: center;
+}
+
+.full-card-illustration {
+  width: 220px;
+  height: 308px;
+}
+
+.full-climax-card-illustration {
+  width: 300px;
+  height: 214px;
+}
+
+.card-headers {
+  border-bottom: ridge;
+}
+
+.hidden {
+  display: none;
+}
