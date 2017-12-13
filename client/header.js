@@ -8,6 +8,7 @@ export default function Header({ handleClick }) {
       </a>
       <div id="cards-and-packs-buttons" onClick={handleClick}>
         <button id="view-cards">VIEW CARDS</button>
+        <button id="view-packs" className="hidden">VIEW PACKS</button>
       </div>
     </header>
   )

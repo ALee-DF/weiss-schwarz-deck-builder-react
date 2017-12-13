@@ -49,8 +49,17 @@ export default class App extends Component {
           ]
         }, [])
       })
+      document.querySelector('#view-cards').classList.add('hidden')
+      document.querySelector('#view-packs').classList.remove('hidden')
       document.querySelector('#booster-packs-section').classList.add('hidden')
       document.querySelector('#card-list-section').classList.remove('hidden')
+    }
+
+    if (target.closest('button').id === 'view-packs') {
+      document.querySelector('#view-cards').classList.remove('hidden')
+      document.querySelector('#view-packs').classList.add('hidden')
+      document.querySelector('#booster-packs-section').classList.remove('hidden')
+      document.querySelector('#card-list-section').classList.add('hidden')
     }
   }
 

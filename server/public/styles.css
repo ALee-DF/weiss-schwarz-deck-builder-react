@@ -40,6 +40,14 @@ button {
   background-color: blue;
 }
 
+#view-packs {
+  width: 130px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: red;
+}
+
 #card-list-section {
   margin: 0;
   padding: 100px 20px 20px;
