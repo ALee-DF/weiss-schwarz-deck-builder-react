@@ -990,29 +990,6 @@ export const boosterPacksList = [
         picture: 'booster-packs/sword-art-online-vol-2/card/s26-e048.jpg'
       },
       {
-        cardName: 'Realization of Love, Lisbeth',
-        cardNumber: 'SAO/S26-E048',
-        expansion: 'Sword Art Online Vol. 2',
-        cardType: 'Character',
-        level: 0,
-        power: 2500,
-        trigger: '',
-        rarity: 'U',
-        side: 'S',
-        color: 'red',
-        cost: 0,
-        soul: 'booster-packs/card-triggers/soul.png',
-        attribute: ['Avatar', 'Weapon'],
-        text: '【AUTO】 When this card attacks, if a card named "Back to Her ' +
-          'Cheerful Self" is in your climax area, put the top three cards of ' +
-          'your deck into your waiting room. If all those cards are 《Avatar》 ' +
-          'or 《Net》 characters, choose a character in your waiting room, and ' +
-          'return it to your hand.',
-        flavorText: 'The warmth of Kirito\'s hands…… The way I feel……\nI ' +
-          'wasn\'t imagining it.',
-        picture: 'booster-packs/sword-art-online-vol-2/card/s26-e048.jpg'
-      },
-      {
         cardName: 'Ceasefire Agreement, Keiko',
         cardNumber: 'SAO/S26-E049',
         expansion: 'Sword Art Online Vol. 2',
