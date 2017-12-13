@@ -82,9 +82,25 @@ button {
   text-align: center;
 }
 
+.climax-card-icons {
+  display: inline-block;
+  width: 300;
+  height: 214px;
+  margin: 5px;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0 3px 5px black;
+  text-align: center;
+}
+
 .full-card-illustration {
   width: 220px;
   height: 308px;
+}
+
+.full-climax-card-illustration {
+  width: 300px;
+  height: 214px;
 }
 
 .card-headers {
