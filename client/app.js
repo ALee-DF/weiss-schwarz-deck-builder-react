@@ -13,6 +13,7 @@ export default class App extends Component {
     }
     this.handlePacksClick = this.handlePacksClick.bind(this)
     this.handleViewsClick = this.handleViewsClick.bind(this)
+    this.handleCardListClick = this.handleCardListClick.bind(this)
   }
 
   handlePacksClick({ target }) {
@@ -63,6 +64,11 @@ export default class App extends Component {
     }
   }
 
+  handleCardListClick({ target }) {
+    if (target.closest('div') === null || !target.closest('div').hasAttribute('card-number')) return
+    console.log(target.closest('div'))
+  }
+
   render() {
     return (
       <div>
@@ -74,6 +80,7 @@ export default class App extends Component {
         <CardListSection
           boosterPacksList={boosterPacksList}
           cards={this.state.cards}
+          handleClick={this.handleCardListClick}
         />
       </div>
     )
