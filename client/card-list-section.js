@@ -1,8 +1,11 @@
 import React from 'react'
-const renderCards = ({ cardName, picture, cardType }, index) =>
+const renderCards = ({ cardName, cardNumber, cardType, expansion, picture }, index) =>
   <div
     key={index}
-    className={cardType === 'Climax' ? 'climax-card-icons' : 'card-icons'}>
+    className={cardType === 'Climax' ? 'climax-card-icons' : 'card-icons'}
+    card-number={cardNumber}
+    card-type={cardType}
+    expansion={expansion}>
     <img
       className={cardType === 'Climax' ? 'full-climax-card-illustration' : 'full-card-illustration'}
       src={picture}
@@ -10,9 +13,9 @@ const renderCards = ({ cardName, picture, cardType }, index) =>
     />
   </div>
 
-export default function CardListSection({ boosterPacksList, cards }) {
+export default function CardListSection({ cards, handleClick }) {
   return (
-    <section id="card-list-section" className='hidden'>
+    <section id="card-list-section" className='hidden' onClick={handleClick}>
       <div>
         <h1 className='card-headers'>Characters Cards</h1>
         {

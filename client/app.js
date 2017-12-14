@@ -9,10 +9,12 @@ export default class App extends Component {
     super(props)
     this.state = {
       cards: [],
-      selectedPacks: []
+      selectedPacks: [],
+      deck: []
     }
     this.handlePacksClick = this.handlePacksClick.bind(this)
     this.handleViewsClick = this.handleViewsClick.bind(this)
+    this.handleCardListClick = this.handleCardListClick.bind(this)
   }
 
   handlePacksClick({ target }) {
@@ -63,17 +65,34 @@ export default class App extends Component {
     }
   }
 
+  handleCardListClick({ target }) {
+    if (target.closest('div') === null ||
+      !target.closest('div').hasAttribute('card-number') ||
+      this.state.deck.length === 50) return
+    if (target.closest('div').getAttribute('card-type') === 'Climax' &&
+      this.state.deck.filter(({ cardType }) => cardType === 'Climax').length === 8) return
+
+    const retrievedCard = boosterPacksList[boosterPacksList.findIndex(({ expansion }) => expansion === target.closest('div').getAttribute('expansion'))].cards.find(({ cardNumber }) => cardNumber === target.closest('div').getAttribute('card-number'))
+    if (this.state.deck.filter(({ cardName }) => cardName === retrievedCard.cardName).length === 4) return
+    this.setState({
+      deck: [...this.state.deck, retrievedCard]
+    })
+  }
+
   render() {
     return (
       <div>
-        <Header handleClick={this.handleViewsClick} />
+        <Header
+          deck={this.state.deck}
+          handleClick={this.handleViewsClick}
+        />
         <BoosterPacksSection
           boosterPacksList={boosterPacksList}
           handleClick={this.handlePacksClick}
         />
         <CardListSection
-          boosterPacksList={boosterPacksList}
           cards={this.state.cards}
+          handleClick={this.handleCardListClick}
         />
       </div>
     )
