@@ -9,7 +9,8 @@ export default class App extends Component {
     super(props)
     this.state = {
       cards: [],
-      selectedPacks: []
+      selectedPacks: [],
+      deck: []
     }
     this.handlePacksClick = this.handlePacksClick.bind(this)
     this.handleViewsClick = this.handleViewsClick.bind(this)
@@ -66,7 +67,9 @@ export default class App extends Component {
 
   handleCardListClick({ target }) {
     if (target.closest('div') === null || !target.closest('div').hasAttribute('card-number')) return
-    console.log(target.closest('div'))
+    this.setState({
+      deck: [...this.state.deck, target.closest('div').getAttribute('card-number')]
+    })
   }
 
   render() {
