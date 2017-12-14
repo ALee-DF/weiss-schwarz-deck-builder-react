@@ -71,11 +71,11 @@ export default class App extends Component {
       this.state.deck.length === 50) return
     if (target.closest('div').getAttribute('card-type') === 'Climax' &&
       this.state.deck.filter(({ cardType }) => cardType === 'Climax').length === 8) return
+
+    const retrievedCard = boosterPacksList[boosterPacksList.findIndex(({ expansion }) => expansion === target.closest('div').getAttribute('expansion'))].cards.find(({ cardNumber }) => cardNumber === target.closest('div').getAttribute('card-number'))
+    if (this.state.deck.filter(({ cardName }) => cardName === retrievedCard.cardName).length === 4) return
     this.setState({
-      deck: [
-        ...this.state.deck,
-        boosterPacksList[boosterPacksList.findIndex(({ expansion }) => expansion === target.closest('div').getAttribute('expansion'))].cards.find(({ cardNumber }) => cardNumber === target.closest('div').getAttribute('card-number'))
-      ]
+      deck: [...this.state.deck, retrievedCard]
     })
   }
 
