@@ -3,7 +3,8 @@ const renderCards = ({ cardName, cardNumber, cardType, picture }, index) =>
   <div
     key={index}
     className={cardType === 'Climax' ? 'climax-card-icons' : 'card-icons'}
-    card-number={cardNumber}>
+    card-number={cardNumber}
+    card-type={cardType}>
     <img
       className={cardType === 'Climax' ? 'full-climax-card-illustration' : 'full-card-illustration'}
       src={picture}
