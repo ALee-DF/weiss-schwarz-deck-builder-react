@@ -12,7 +12,7 @@ const renderCards = ({ cardName, cardNumber, cardType, picture }, index) =>
     />
   </div>
 
-export default function CardListSection({ boosterPacksList, cards, handleClick }) {
+export default function CardListSection({ cards, handleClick }) {
   return (
     <section id="card-list-section" className='hidden' onClick={handleClick}>
       <div>

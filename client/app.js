@@ -84,7 +84,6 @@ export default class App extends Component {
           handleClick={this.handlePacksClick}
         />
         <CardListSection
-          boosterPacksList={boosterPacksList}
           cards={this.state.cards}
           handleClick={this.handleCardListClick}
         />
