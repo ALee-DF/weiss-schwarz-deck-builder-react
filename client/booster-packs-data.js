@@ -623,7 +623,7 @@ export const boosterPacksList = [
       {
         cardName: 'Childhood Suguha',
         cardNumber: 'SAO/S26-E036',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 1,
         power: 7000,
@@ -641,7 +641,7 @@ export const boosterPacksList = [
       {
         cardName: 'Territory Leader of 《Sylph》, Sakuya',
         cardNumber: 'SAO/S26-E037',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 2,
         power: 8500,
@@ -659,7 +659,7 @@ export const boosterPacksList = [
       {
         cardName: 'Specialty of Sylvein',
         cardNumber: 'SAO/S26-E038',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Event',
         level: 1,
         power: '',
@@ -678,7 +678,7 @@ export const boosterPacksList = [
       {
         cardName: 'Fairy Dance',
         cardNumber: 'SAO/S26-E039',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Climax',
         level: '',
         power: '',
@@ -698,7 +698,7 @@ export const boosterPacksList = [
       {
         cardName: 'Memories from Last Night',
         cardNumber: 'SAO/S26-E040',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Climax',
         level: '',
         power: '',
@@ -718,7 +718,7 @@ export const boosterPacksList = [
       {
         cardName: '《Cait Sith》 Girl, Silica',
         cardNumber: 'SAO/S26-E041',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 1,
         power: 7500,
@@ -740,7 +740,7 @@ export const boosterPacksList = [
       {
         cardName: '《Cait Sith》 Girl, Silica',
         cardNumber: 'SAO/S26-E041SP',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 1,
         power: 7500,
@@ -762,7 +762,7 @@ export const boosterPacksList = [
       {
         cardName: 'Silica\'s Relieved Smile',
         cardNumber: 'SAO/S26-E042',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 2,
         power: 7500,
@@ -786,7 +786,7 @@ export const boosterPacksList = [
       {
         cardName: 'Silica Looking Up At the Sky',
         cardNumber: 'SAO/S26-E043',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 0,
         power: 2500,
@@ -808,7 +808,7 @@ export const boosterPacksList = [
       {
         cardName: '《Leprechaun》 Girl, Lisbeth',
         cardNumber: 'SAO/S26-E044',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 1,
         power: 4500,
@@ -829,7 +829,7 @@ export const boosterPacksList = [
       {
         cardName: '《Leprechaun》 Girl, Lisbeth',
         cardNumber: 'SAO/S26-E044S',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 1,
         power: 4500,
@@ -850,7 +850,7 @@ export const boosterPacksList = [
       {
         cardName: 'Silica\'s Bashful Troubled Look',
         cardNumber: 'SAO/S26-E045',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 3,
         power: 9500,
@@ -872,7 +872,7 @@ export const boosterPacksList = [
       {
         cardName: 'Silica\'s Bashful Troubled Look',
         cardNumber: 'SAO/S26-E045S',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 3,
         power: 9500,
@@ -894,7 +894,7 @@ export const boosterPacksList = [
       {
         cardName: 'Lisbeth\'s Shining Smile',
         cardNumber: 'SAO/S26-E046',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 3,
         power: 10000,
@@ -921,7 +921,7 @@ export const boosterPacksList = [
       {
         cardName: 'Lisbeth\'s Shining Smile',
         cardNumber: 'SAO/S26-E046SP',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 3,
         power: 10000,
@@ -948,7 +948,7 @@ export const boosterPacksList = [
       {
         cardName: 'Rika Shinozaki',
         cardNumber: 'SAO/S26-E047',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 0,
         power: 2000,
@@ -969,7 +969,7 @@ export const boosterPacksList = [
       {
         cardName: 'Realization of Love, Lisbeth',
         cardNumber: 'SAO/S26-E048',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 0,
         power: 2500,
@@ -992,7 +992,7 @@ export const boosterPacksList = [
       {
         cardName: 'Ceasefire Agreement, Keiko',
         cardNumber: 'SAO/S26-E049',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 0,
         power: 3500,
@@ -1013,7 +1013,7 @@ export const boosterPacksList = [
       {
         cardName: 'Keiko Ayano',
         cardNumber: 'SAO/S26-E050',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 1,
         power: 2000,
@@ -1037,7 +1037,7 @@ export const boosterPacksList = [
       {
         cardName: 'Ceasefire Agreement, Rika',
         cardNumber: 'SAO/S26-E051',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 2,
         power: 7500,
@@ -1058,7 +1058,7 @@ export const boosterPacksList = [
       {
         cardName: 'Ceasefire Agreement, Rika',
         cardNumber: 'SAO/S26-E051R',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 2,
         power: 7500,
@@ -1079,7 +1079,7 @@ export const boosterPacksList = [
       {
         cardName: 'Keiko in Uniform',
         cardNumber: 'SAO/S26-E052',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 0,
         power: 1000,
@@ -1098,7 +1098,7 @@ export const boosterPacksList = [
       {
         cardName: 'Lisbeth\'s Material Gathering Adventure',
         cardNumber: 'SAO/S26-E053',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 0,
         power: 3000,
@@ -1116,7 +1116,7 @@ export const boosterPacksList = [
       {
         cardName: 'Caution Towards Kindness, Silica',
         cardNumber: 'SAO/S26-E054',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 1,
         power: 5500,
@@ -1134,7 +1134,7 @@ export const boosterPacksList = [
       {
         cardName: 'Lisbeth Being Mean',
         cardNumber: 'SAO/S26-E055',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 1,
         power: 2000,
@@ -1155,7 +1155,7 @@ export const boosterPacksList = [
       {
         cardName: 'Lisbeth\'s Gentle Warmth',
         cardNumber: 'SAO/S26-E056',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 2,
         power: 9000,
@@ -1173,7 +1173,7 @@ export const boosterPacksList = [
       {
         cardName: 'Commander Eugene',
         cardNumber: 'SAO/S26-E057',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 2,
         power: 9500,
@@ -1192,7 +1192,7 @@ export const boosterPacksList = [
       {
         cardName: '《Demonic Sword Gram》',
         cardNumber: 'SAO/S26-E058',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Event',
         level: 2,
         power: '',
@@ -1212,7 +1212,7 @@ export const boosterPacksList = [
       {
         cardName: 'Happening During Battle',
         cardNumber: 'SAO/S26-E059',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Climax',
         level: '',
         power: '',
@@ -1232,7 +1232,7 @@ export const boosterPacksList = [
       {
         cardName: 'Back to Her Cheerful Self',
         cardNumber: 'SAO/S26-E060',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Climax',
         level: '',
         power: '',
@@ -1250,7 +1250,7 @@ export const boosterPacksList = [
       {
         cardName: 'Yui\'s Adventure to Search for Mommy',
         cardNumber: 'SAO/S26-E061',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 2,
         power: 4500,
@@ -1271,7 +1271,7 @@ export const boosterPacksList = [
       {
         cardName: 'Yui\'s Adventure to Search for Mommy',
         cardNumber: 'SAO/S26-E061SP',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 2,
         power: 4500,
@@ -1292,7 +1292,7 @@ export const boosterPacksList = [
       {
         cardName: 'Demon of 《Dual-wielding》, Kirito',
         cardNumber: 'SAO/S26-E062',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 3,
         power: 10000,
@@ -1317,7 +1317,7 @@ export const boosterPacksList = [
       {
         cardName: 'Demon of 《Dual-wielding》, Kirito',
         cardNumber: 'SAO/S26-E062SP',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 3,
         power: 10000,
@@ -1341,7 +1341,7 @@ export const boosterPacksList = [
       {
         cardName: 'Kirito Takes Shelter',
         cardNumber: 'SAO/S26-E063',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 0,
         power: 2000,
@@ -1361,7 +1361,7 @@ export const boosterPacksList = [
       {
         cardName: '《Kirito Takes on 《ALO》',
         cardNumber: 'SAO/S26-E064',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 0,
         power: 2500,
@@ -1383,7 +1383,7 @@ export const boosterPacksList = [
       {
         cardName: '《Kirito Takes on 《ALO》',
         cardNumber: 'SAO/S26-E064R',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 0,
         power: 2500,
@@ -1405,7 +1405,7 @@ export const boosterPacksList = [
       {
         cardName: '《Spriggan》 Boy, Kirito',
         cardNumber: 'SAO/S26-E065',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 1,
         power: 3000,
@@ -1431,7 +1431,7 @@ export const boosterPacksList = [
       {
         cardName: '《Spriggan》 Boy, Kirito',
         cardNumber: 'SAO/S26-E065S',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 1,
         power: 3000,
@@ -1457,7 +1457,7 @@ export const boosterPacksList = [
       {
         cardName: 'Kirito\'s Unshakable Belief',
         cardNumber: 'SAO/S26-E066',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 1,
         power: 4000,
@@ -1479,7 +1479,7 @@ export const boosterPacksList = [
       {
         cardName: 'Kirito\'s Married Life',
         cardNumber: 'SAO/S26-E067',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 0,
         power: 500,
@@ -1499,7 +1499,7 @@ export const boosterPacksList = [
       {
         cardName: 'Recovered Memories, Yui',
         cardNumber: 'SAO/S26-E068',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 0,
         power: 500,
@@ -1521,7 +1521,7 @@ export const boosterPacksList = [
       {
         cardName: 'Kirito - Two Worlds',
         cardNumber: 'SAO/S26-E069',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 2,
         power: 7000,
@@ -1543,7 +1543,7 @@ export const boosterPacksList = [
       {
         cardName: 'Encounter with an MMO, Kazuto',
         cardNumber: 'SAO/S26-E070',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 2,
         power: 8500,
@@ -1567,7 +1567,7 @@ export const boosterPacksList = [
       {
         cardName: '《Navigation Pixie》, Yui',
         cardNumber: 'SAO/S26-E071',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 3,
         power: 10000,
@@ -1593,7 +1593,7 @@ export const boosterPacksList = [
       {
         cardName: '《Navigation Pixie》, Yui',
         cardNumber: 'SAO/S26-E071S',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 3,
         power: 10000,
@@ -1619,7 +1619,7 @@ export const boosterPacksList = [
       {
         cardName: 'Dressed Up Yui',
         cardNumber: 'SAO/S26-E072',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 0,
         power: 3000,
@@ -1637,7 +1637,7 @@ export const boosterPacksList = [
       {
         cardName: 'Kirito in the 《Flower Garden》',
         cardNumber: 'SAO/S26-E073',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 0,
         power: 3500,
@@ -1657,7 +1657,7 @@ export const boosterPacksList = [
       {
         cardName: 'Yui\'s Simple Answer',
         cardNumber: 'SAO/S26-E074',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 1,
         power: 5000,
@@ -1677,7 +1677,7 @@ export const boosterPacksList = [
       {
         cardName: 'Reseller, Agil',
         cardNumber: 'SAO/S26-E075',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 1,
         power: 2000,
@@ -1698,7 +1698,7 @@ export const boosterPacksList = [
       {
         cardName: 'Battle in the Front Lines, Kirito',
         cardNumber: 'SAO/S26-E076',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 1,
         power: 7000,
@@ -1716,7 +1716,7 @@ export const boosterPacksList = [
       {
         cardName: 'Friendly Youth, Klein',
         cardNumber: 'SAO/S26-E077',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Character',
         level: 2,
         power: 8500,
@@ -1734,7 +1734,7 @@ export const boosterPacksList = [
       {
         cardName: '《The Seed》',
         cardNumber: 'SAO/S26-E078',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Event',
         level: 1,
         power: '',
@@ -1754,7 +1754,7 @@ export const boosterPacksList = [
       {
         cardName: 'Confrontation Between the Strongest Players',
         cardNumber: 'SAO/S26-E079',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Climax',
         level: '',
         power: '',
@@ -1774,7 +1774,7 @@ export const boosterPacksList = [
       {
         cardName: 'Reunion with Yui',
         cardNumber: 'SAO/S26-E080',
-        expansion: 'Sword Art Online Vol. 2',
+        expansion: 'Sword Art Online Vol.2',
         cardType: 'Climax',
         level: '',
         power: '',

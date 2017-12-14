@@ -1,10 +1,10 @@
 import React from 'react'
-const renderCards = ({ cardName, cardNumber, cardType, picture }, index) =>
+const renderCards = ({ cardName, cardNumber, cardType, expansion, picture }, index) =>
   <div
     key={index}
     className={cardType === 'Climax' ? 'climax-card-icons' : 'card-icons'}
     card-number={cardNumber}
-    card-type={cardType}>
+    expansion={expansion}>
     <img
       className={cardType === 'Climax' ? 'full-climax-card-illustration' : 'full-card-illustration'}
       src={picture}

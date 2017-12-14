@@ -68,7 +68,10 @@ export default class App extends Component {
   handleCardListClick({ target }) {
     if (target.closest('div') === null || !target.closest('div').hasAttribute('card-number')) return
     this.setState({
-      deck: [...this.state.deck, target.closest('div').getAttribute('card-number')]
+      deck: [
+        ...this.state.deck,
+        boosterPacksList[boosterPacksList.findIndex(({ expansion }) => expansion === target.closest('div').getAttribute('expansion'))].cards.find(({ cardNumber }) => cardNumber === target.closest('div').getAttribute('card-number'))
+      ]
     })
   }
 

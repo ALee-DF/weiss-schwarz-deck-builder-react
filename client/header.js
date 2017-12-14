@@ -13,15 +13,15 @@ export default function Header({ deck, handleClick }) {
       <div id="card-count-section">
         <div className="deck-column-1-of-4">
           <p>Character</p>
-          <p>0</p>
+          <p>{deck.filter(({ cardType }) => cardType === 'Character').length}</p>
         </div>
         <div className="deck-column-2-of-4">
           <p>Event</p>
-          <p>0</p>
+          <p>{deck.filter(({ cardType }) => cardType === 'Event').length}</p>
         </div>
         <div className="deck-column-3-of-4">
           <p>Climax</p>
-          <p>0</p>
+          <p>{deck.filter(({ cardType }) => cardType === 'Climax').length}</p>
         </div>
         <div className="deck-column-4-of-4">
           <p>Card Count</p>
