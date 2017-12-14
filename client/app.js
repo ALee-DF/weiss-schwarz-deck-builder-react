@@ -66,7 +66,9 @@ export default class App extends Component {
   }
 
   handleCardListClick({ target }) {
-    if (target.closest('div') === null || !target.closest('div').hasAttribute('card-number')) return
+    if (target.closest('div') === null ||
+      !target.closest('div').hasAttribute('card-number') ||
+      this.state.deck.length === 50) return
     this.setState({
       deck: [
         ...this.state.deck,
