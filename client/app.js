@@ -69,6 +69,8 @@ export default class App extends Component {
     if (target.closest('div') === null ||
       !target.closest('div').hasAttribute('card-number') ||
       this.state.deck.length === 50) return
+    if (target.closest('div').getAttribute('card-type') === 'Climax' &&
+      this.state.deck.filter(({ cardType }) => cardType === 'Climax').length === 8) return
     this.setState({
       deck: [
         ...this.state.deck,
