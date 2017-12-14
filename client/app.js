@@ -75,7 +75,10 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Header handleClick={this.handleViewsClick} />
+        <Header
+          deck={this.state.deck}
+          handleClick={this.handleViewsClick}
+        />
         <BoosterPacksSection
           boosterPacksList={boosterPacksList}
           handleClick={this.handlePacksClick}

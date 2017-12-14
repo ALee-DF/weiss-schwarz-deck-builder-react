@@ -54,6 +54,21 @@ button {
   background-color: rgb(255, 255, 255);
 }
 
+#card-count-section {
+  float: right;
+  height: 100px;
+  color: white;
+}
+
+.deck-column-1-of-4,
+.deck-column-2-of-4,
+.deck-column-3-of-4,
+.deck-column-4-of-4 {
+  float: left;
+  width: 90px;
+  text-align: center;
+}
+
 .booster-pack-icon {
   width: 170px;
   height: 340px;
