@@ -59,6 +59,17 @@ button {
   background-color: green;
 }
 
+#return {
+  position: relative;
+  left: 70px;
+  bottom: 30px;
+  width: 130px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: green;
+}
+
 #card-list-section {
   margin: 0;
   padding: 100px 20px 20px;
@@ -69,6 +80,12 @@ button {
   float: right;
   height: 100px;
   color: white;
+}
+
+#deck-section {
+  margin: 0;
+  padding: 100px 20px 20px;
+  background-color: rgb(255, 255, 255);
 }
 
 .deck-column-1-of-4,
@@ -135,4 +152,8 @@ button {
 
 .hidden {
   display: none;
+}
+
+.invisible {
+  visibility: hidden;
 }

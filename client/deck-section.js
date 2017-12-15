@@ -15,7 +15,7 @@ const renderCards = ({ cardName, cardNumber, cardType, expansion, picture }, ind
 
 export default function DeckSection({ deck }) {
   return (
-    <section id='deck-section'>
+    <section id='deck-section' className='hidden'>
       <div>
         <h1 className='card-headers'>Level 0</h1>
         {

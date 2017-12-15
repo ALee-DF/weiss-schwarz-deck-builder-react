@@ -10,7 +10,8 @@ export default function Header({ deck, handleClick }) {
         <button id="view-cards">VIEW CARDS</button>
         <button id="view-packs" className="hidden">VIEW PACKS</button>
       </div>
-      <button id="view-deck">VIEW DECK</button>
+      <button id="view-deck" onClick={handleClick}>VIEW DECK</button>
+      <button id="return" className="hidden" onClick={handleClick}>RETURN</button>
       <div id="card-count-section">
         <div className="deck-column-1-of-4">
           <p>Character</p>
