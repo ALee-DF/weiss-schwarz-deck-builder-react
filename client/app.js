@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from './header.js'
 import BoosterPacksSection from './booster-packs-section.js'
 import CardListSection from './card-list-section.js'
+import DeckSection from './deck-section.js'
 import { boosterPacksList } from './booster-packs-data.js'
 
 export default class App extends Component {
@@ -94,6 +95,7 @@ export default class App extends Component {
           cards={this.state.cards}
           handleClick={this.handleCardListClick}
         />
+        <DeckSection />
       </div>
     )
   }
