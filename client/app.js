@@ -95,7 +95,9 @@ export default class App extends Component {
           cards={this.state.cards}
           handleClick={this.handleCardListClick}
         />
-        <DeckSection />
+        <DeckSection
+          deck={this.state.deck}
+        />
       </div>
     )
   }
