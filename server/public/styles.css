@@ -48,6 +48,17 @@ button {
   background-color: red;
 }
 
+#view-deck {
+  position: relative;
+  left: 70px;
+  bottom: 30px;
+  width: 130px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: green;
+}
+
 #card-list-section {
   margin: 0;
   padding: 100px 20px 20px;
