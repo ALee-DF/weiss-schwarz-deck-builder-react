@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from './header.js'
 import BoosterPacksSection from './booster-packs-section.js'
 import CardListSection from './card-list-section.js'
+import DeckSection from './deck-section.js'
 import { boosterPacksList } from './booster-packs-data.js'
 
 export default class App extends Component {
@@ -10,7 +11,8 @@ export default class App extends Component {
     this.state = {
       cards: [],
       selectedPacks: [],
-      deck: []
+      deck: [],
+      uniqueCardsDeck: []
     }
     this.handlePacksClick = this.handlePacksClick.bind(this)
     this.handleViewsClick = this.handleViewsClick.bind(this)
@@ -63,6 +65,35 @@ export default class App extends Component {
       document.querySelector('#booster-packs-section').classList.remove('hidden')
       document.querySelector('#card-list-section').classList.add('hidden')
     }
+
+    if (target.closest('button').id === 'view-deck') {
+      const uniqueDeck = []
+      for (let i = 0; i < this.state.deck.length; i++) {
+        const index = uniqueDeck.findIndex(({ cardNumber }) => cardNumber === this.state.deck[i].cardNumber)
+        if (index !== -1) {
+          uniqueDeck[index].copies++
+        }
+        else {
+          uniqueDeck.push(Object.assign({}, this.state.deck[i], {copies: 1}))
+        }
+      }
+      this.setState({
+        uniqueCardsDeck: uniqueDeck
+      })
+      document.querySelector('#cards-and-packs-buttons').classList.add('invisible')
+      document.querySelector('#view-deck').classList.add('hidden')
+      document.querySelector('#return').classList.remove('hidden')
+      document.querySelector('#booster-pack-and-card-list-section').classList.add('hidden')
+      document.querySelector('#deck-section').classList.remove('hidden')
+    }
+
+    if (target.closest('button').id === 'return') {
+      document.querySelector('#cards-and-packs-buttons').classList.remove('invisible')
+      document.querySelector('#view-deck').classList.remove('hidden')
+      document.querySelector('#return').classList.add('hidden')
+      document.querySelector('#booster-pack-and-card-list-section').classList.remove('hidden')
+      document.querySelector('#deck-section').classList.add('hidden')
+    }
   }
 
   handleCardListClick({ target }) {
@@ -86,13 +117,18 @@ export default class App extends Component {
           deck={this.state.deck}
           handleClick={this.handleViewsClick}
         />
-        <BoosterPacksSection
-          boosterPacksList={boosterPacksList}
-          handleClick={this.handlePacksClick}
-        />
-        <CardListSection
-          cards={this.state.cards}
-          handleClick={this.handleCardListClick}
+        <div id='booster-pack-and-card-list-section'>
+          <BoosterPacksSection
+            boosterPacksList={boosterPacksList}
+            handleClick={this.handlePacksClick}
+          />
+          <CardListSection
+            cards={this.state.cards}
+            handleClick={this.handleCardListClick}
+          />
+        </div>
+        <DeckSection
+          deck={this.state.uniqueCardsDeck}
         />
       </div>
     )

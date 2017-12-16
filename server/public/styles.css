@@ -48,6 +48,28 @@ button {
   background-color: red;
 }
 
+#view-deck {
+  position: relative;
+  left: 70px;
+  bottom: 30px;
+  width: 130px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: green;
+}
+
+#return {
+  position: relative;
+  left: 70px;
+  bottom: 30px;
+  width: 130px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: green;
+}
+
 #card-list-section {
   margin: 0;
   padding: 100px 20px 20px;
@@ -58,6 +80,12 @@ button {
   float: right;
   height: 100px;
   color: white;
+}
+
+#deck-section {
+  margin: 0;
+  padding: 100px 20px 20px;
+  background-color: rgb(255, 255, 255);
 }
 
 .deck-column-1-of-4,
@@ -124,4 +152,42 @@ button {
 
 .hidden {
   display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.select-bar {
+  margin-top: 3px;
+  height: 25px;
+  width: 50px;
+  font-size: 15px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 11px;
+}
+
+.deck-card-icons {
+  display: inline-block;
+  width: 220px;
+  height: 360px;
+  margin: 5px;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0 3px 5px black;
+  text-align: center;
+}
+
+.deck-climax-card-icons {
+  display: inline-block;
+  width: 300;
+  height: 260px;
+  margin: 5px;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0 3px 5px black;
+  text-align: center;
 }
