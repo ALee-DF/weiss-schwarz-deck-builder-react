@@ -11,7 +11,8 @@ export default class App extends Component {
     this.state = {
       cards: [],
       selectedPacks: [],
-      deck: []
+      deck: [],
+      uniqueCardsDeck: []
     }
     this.handlePacksClick = this.handlePacksClick.bind(this)
     this.handleViewsClick = this.handleViewsClick.bind(this)
@@ -66,6 +67,19 @@ export default class App extends Component {
     }
 
     if (target.closest('button').id === 'view-deck') {
+      const uniqueDeck = []
+      for (let i = 0; i < this.state.deck.length; i++) {
+        const index = uniqueDeck.findIndex(({ cardNumber }) => cardNumber === this.state.deck[i].cardNumber)
+        if (index !== -1) {
+          uniqueDeck[index].copies++
+        }
+        else {
+          uniqueDeck.push(Object.assign({}, this.state.deck[i], {copies: 1}))
+        }
+      }
+      this.setState({
+        uniqueCardsDeck: uniqueDeck
+      })
       document.querySelector('#cards-and-packs-buttons').classList.add('invisible')
       document.querySelector('#view-deck').classList.add('hidden')
       document.querySelector('#return').classList.remove('hidden')
@@ -114,7 +128,7 @@ export default class App extends Component {
           />
         </div>
         <DeckSection
-          deck={this.state.deck}
+          deck={this.state.uniqueCardsDeck}
         />
       </div>
     )
