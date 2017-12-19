@@ -1,5 +1,5 @@
 import React from 'react'
-const renderCards = ({ cardName, cardNumber, cardType, expansion, picture }, index) =>
+const renderCards = ({ cardName, cardNumber, cardType, expansion, rarity, picture }, index) =>
   <div
     key={index}
     className={cardType === 'Climax' ? 'climax-card-icons' : 'card-icons'}
@@ -11,6 +11,14 @@ const renderCards = ({ cardName, cardNumber, cardType, expansion, picture }, ind
       src={picture}
       alt={cardName}
     />
+    <p className='card-title'>{cardName + ' (' + rarity + ')'}</p>
+    <select className='select-bar'>
+      <option value='0'>0</option>
+      <option value='1'>1</option>
+      <option value='2'>2</option>
+      <option value='3'>3</option>
+      <option value='4'>4</option>
+    </select>
   </div>
 
 export default function CardListSection({ cards, handleClick }) {

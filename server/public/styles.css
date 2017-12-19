@@ -2,6 +2,7 @@ body {
   width: 1000px;
   margin: 0 auto;
   background-color: rgb(243, 243, 243);
+  font-family: 'Open Sans', sans-serif;
 }
 
 html {
@@ -117,7 +118,7 @@ button {
 .card-icons {
   display: inline-block;
   width: 220px;
-  height: 308px;
+  height: 360px;
   margin: 5px;
   padding: 5px;
   background-color: white;
@@ -128,7 +129,7 @@ button {
 .climax-card-icons {
   display: inline-block;
   width: 300;
-  height: 214px;
+  height: 260px;
   margin: 5px;
   padding: 5px;
   background-color: white;
@@ -170,24 +171,8 @@ button {
   font-size: 11px;
 }
 
-.deck-card-icons {
-  display: inline-block;
-  width: 220px;
-  height: 360px;
-  margin: 5px;
-  padding: 5px;
-  background-color: white;
-  box-shadow: 0 3px 5px black;
-  text-align: center;
-}
-
-.deck-climax-card-icons {
-  display: inline-block;
-  width: 300;
-  height: 260px;
-  margin: 5px;
-  padding: 5px;
-  background-color: white;
-  box-shadow: 0 3px 5px black;
-  text-align: center;
+.expansion-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
 }

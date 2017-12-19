@@ -2,7 +2,7 @@ import React from 'react'
 const renderCards = ({ cardName, cardNumber, copies, cardType, expansion, rarity, picture }, index) =>
   <div
     key={index}
-    className={cardType === 'Climax' ? 'deck-climax-card-icons' : 'deck-card-icons'}
+    className={cardType === 'Climax' ? 'climax-card-icons' : 'card-icons'}
     card-number={cardNumber}
     card-type={cardType}
     expansion={expansion}>
