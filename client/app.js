@@ -110,8 +110,13 @@ export default class App extends Component {
   }
 
   handleSelectChange({ target }) {
-    console.log(target.value)
-    console.log(target.closest('div'))
+    if (target.value === '0') {
+      const editedDeck = [...this.state.deck]
+      editedDeck.splice(editedDeck.findIndex(({ cardNumber }) => cardNumber === target.closest('div').getAttribute('card-number')), 1)
+      this.setState({
+        deck: editedDeck
+      })
+    }
   }
 
   render() {
