@@ -89,6 +89,9 @@ export default class App extends Component {
       this.state.deck.reduce((sum, card) => card.cardType === 'Climax' ? sum + card.copies : sum, 0) === 8) return
 
     const retrievedCard = boosterPacksList[boosterPacksList.findIndex(({ expansion }) => expansion === target.closest('div').getAttribute('expansion'))].cards.find(({ cardNumber }) => cardNumber === target.closest('div').getAttribute('card-number'))
+    const numberOfSameCardNames = this.state.deck.reduce((sum, card) => card.cardName === retrievedCard.cardName ? sum + card.copies : sum, 0)
+    if (numberOfSameCardNames === 4) return
+
     const deckIndex = this.state.deck.findIndex(({ cardName, cardNumber }) => cardName === retrievedCard.cardName && cardNumber === retrievedCard.cardNumber)
     if (deckIndex === -1) {
       retrievedCard['copies'] = 1
@@ -99,9 +102,6 @@ export default class App extends Component {
     }
 
     const updateDeck = [...this.state.deck]
-    const numberOfSameCardNames = updateDeck.reduce((sum, card) => card.cardName === retrievedCard.cardName ? sum + card.copies : sum, 0)
-    if (numberOfSameCardNames === 4) return
-
     updateDeck[deckIndex].copies = updateDeck[deckIndex].copies + 1
     this.setState({
       deck: updateDeck
