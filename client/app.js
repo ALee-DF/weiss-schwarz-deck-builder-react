@@ -16,6 +16,7 @@ export default class App extends Component {
     this.handlePacksClick = this.handlePacksClick.bind(this)
     this.handleViewsClick = this.handleViewsClick.bind(this)
     this.handleCardListClick = this.handleCardListClick.bind(this)
+    this.handleSelectChange = this.handleSelectChange.bind(this)
   }
 
   handlePacksClick({ target }) {
@@ -108,6 +109,11 @@ export default class App extends Component {
     })
   }
 
+  handleSelectChange({ target }) {
+    console.log(target.value)
+    console.log(target.closest('div'))
+  }
+
   render() {
     return (
       <div>
@@ -127,6 +133,7 @@ export default class App extends Component {
         </div>
         <DeckSection
           deck={this.state.deck}
+          handleChange={this.handleSelectChange}
         />
       </div>
     )

@@ -12,7 +12,7 @@ const renderCards = ({ cardName, cardNumber, cardType, copies, expansion, rarity
       alt={cardName}
     />
     <p className='card-title'>{cardName + ' (' + rarity + ')'}</p>
-    <select className='select-bar'>
+    <select className='select-bar' value={copies} readOnly='readonly'>
       <option value='0'>0</option>
       <option value='1'>1</option>
       <option value='2'>2</option>
@@ -21,9 +21,9 @@ const renderCards = ({ cardName, cardNumber, cardType, copies, expansion, rarity
     </select>
   </div>
 
-export default function DeckSection({ deck }) {
+export default function DeckSection({ deck, handleChange }) {
   return (
-    <section id='deck-section' className='hidden'>
+    <section id='deck-section' className='hidden' onChange={handleChange}>
       <div>
         <h1 className='card-headers'>Level 0</h1>
         {
