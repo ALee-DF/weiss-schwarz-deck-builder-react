@@ -11,8 +11,7 @@ export default class App extends Component {
     this.state = {
       cards: [],
       selectedPacks: [],
-      deck: [],
-      uniqueCardsDeck: []
+      deck: []
     }
     this.handlePacksClick = this.handlePacksClick.bind(this)
     this.handleViewsClick = this.handleViewsClick.bind(this)
@@ -67,19 +66,6 @@ export default class App extends Component {
     }
 
     if (target.closest('button').id === 'view-deck') {
-      const uniqueDeck = []
-      for (let i = 0; i < this.state.deck.length; i++) {
-        const index = uniqueDeck.findIndex(({ cardNumber }) => cardNumber === this.state.deck[i].cardNumber)
-        if (index !== -1) {
-          uniqueDeck[index].copies++
-        }
-        else {
-          uniqueDeck.push(Object.assign({}, this.state.deck[i], {copies: 1}))
-        }
-      }
-      this.setState({
-        uniqueCardsDeck: uniqueDeck
-      })
       document.querySelector('#cards-and-packs-buttons').classList.add('invisible')
       document.querySelector('#view-deck').classList.add('hidden')
       document.querySelector('#return').classList.remove('hidden')
@@ -97,16 +83,28 @@ export default class App extends Component {
   }
 
   handleCardListClick({ target }) {
-    if (target.closest('div') === null ||
-      !target.closest('div').hasAttribute('card-number') ||
-      this.state.deck.length === 50) return
+    if (target.closest('div') === null || !target.closest('div').hasAttribute('card-number')) return
+    if (this.state.deck.reduce((sum, { copies }) => sum + copies, 0) === 50) return
     if (target.closest('div').getAttribute('card-type') === 'Climax' &&
-      this.state.deck.filter(({ cardType }) => cardType === 'Climax').length === 8) return
+      this.state.deck.reduce((sum, card) => card.cardType === 'Climax' ? sum + card.copies : sum, 0) === 8) return
 
     const retrievedCard = boosterPacksList[boosterPacksList.findIndex(({ expansion }) => expansion === target.closest('div').getAttribute('expansion'))].cards.find(({ cardNumber }) => cardNumber === target.closest('div').getAttribute('card-number'))
-    if (this.state.deck.filter(({ cardName }) => cardName === retrievedCard.cardName).length === 4) return
+    const deckIndex = this.state.deck.findIndex(({ cardName, cardNumber }) => cardName === retrievedCard.cardName && cardNumber === retrievedCard.cardNumber)
+    if (deckIndex === -1) {
+      retrievedCard['copies'] = 1
+      this.setState({
+        deck: [...this.state.deck, retrievedCard]
+      })
+      return
+    }
+
+    const updateDeck = [...this.state.deck]
+    const numberOfSameCardNames = updateDeck.reduce((sum, card) => card.cardName === retrievedCard.cardName ? sum + card.copies : sum, 0)
+    if (numberOfSameCardNames === 4) return
+
+    updateDeck[deckIndex].copies = updateDeck[deckIndex].copies + 1
     this.setState({
-      deck: [...this.state.deck, retrievedCard]
+      deck: updateDeck
     })
   }
 
@@ -128,7 +126,7 @@ export default class App extends Component {
           />
         </div>
         <DeckSection
-          deck={this.state.uniqueCardsDeck}
+          deck={this.state.deck}
         />
       </div>
     )
