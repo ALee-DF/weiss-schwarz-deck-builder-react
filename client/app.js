@@ -110,12 +110,31 @@ export default class App extends Component {
   }
 
   handleSelectChange({ target }) {
+    const retrievedCard = this.state.deck.find(({ cardNumber }) => cardNumber === target.closest('div').getAttribute('card-number'))
     if (target.value === '0') {
       const editedDeck = [...this.state.deck]
-      editedDeck.splice(editedDeck.findIndex(({ cardNumber }) => cardNumber === target.closest('div').getAttribute('card-number')), 1)
+      editedDeck.splice(editedDeck.findIndex(({ cardNumber }) => cardNumber === retrievedCard.cardNumber), 1)
       this.setState({
         deck: editedDeck
       })
+    }
+    else {
+      if (this.state.deck.reduce((sum, { copies }) => sum + copies, 0) - retrievedCard.copies + Number(target.value) > 50) return
+      if (this.state.deck.reduce((sum, card) => card.cardName === retrievedCard.cardName ? sum + card.copies : sum, 0) - retrievedCard.copies + Number(target.value) > 4) return
+      if (retrievedCard.cardType === 'Climax' && this.state.deck.reduce((sum, { cardType }) => cardType === 'Climax', 0) - retrievedCard.copies + Number(target.value <= 8)) {
+        const editedDeck = [...this.state.deck]
+        editedDeck[editedDeck.findIndex(({ cardNumber }) => cardNumber === retrievedCard.cardNumber)].copies = Number(target.value)
+        this.setState({
+          deck: editedDeck
+        })
+      }
+      else {
+        const editedDeck = [...this.state.deck]
+        editedDeck[editedDeck.findIndex(({ cardNumber }) => cardNumber === retrievedCard.cardNumber)].copies = Number(target.value)
+        this.setState({
+          deck: editedDeck
+        })
+      }
     }
   }
 
