@@ -11,12 +11,12 @@ export default class App extends Component {
     this.state = {
       cards: [],
       selectedPacks: [],
-      deck: [],
-      uniqueCardsDeck: []
+      deck: []
     }
     this.handlePacksClick = this.handlePacksClick.bind(this)
     this.handleViewsClick = this.handleViewsClick.bind(this)
     this.handleCardListClick = this.handleCardListClick.bind(this)
+    this.handleSelectChange = this.handleSelectChange.bind(this)
   }
 
   handlePacksClick({ target }) {
@@ -45,13 +45,20 @@ export default class App extends Component {
   handleViewsClick({ target }) {
     if (target.closest('button') === null) return
     if (target.closest('button').id === 'view-cards') {
+      const cardList = this.state.selectedPacks.reduce((cards, selectedExpansion) => {
+        return [
+          ...cards,
+          ...boosterPacksList[boosterPacksList.findIndex(({ expansion }) => expansion === selectedExpansion)].cards
+        ]
+      }, [])
+      cardList.forEach(card => {
+        const retrievedCard = this.state.deck.find(deckCard => deckCard.cardNumber === card.cardNumber)
+        retrievedCard
+          ? card['copies'] = retrievedCard.copies
+          : card['copies'] = 0
+      })
       this.setState({
-        cards: this.state.selectedPacks.reduce((cards, selectedExpansion) => {
-          return [
-            ...cards,
-            ...boosterPacksList[boosterPacksList.findIndex(({ expansion }) => expansion === selectedExpansion)].cards
-          ]
-        }, [])
+        cards: cardList
       })
       document.querySelector('#view-cards').classList.add('hidden')
       document.querySelector('#view-packs').classList.remove('hidden')
@@ -67,19 +74,6 @@ export default class App extends Component {
     }
 
     if (target.closest('button').id === 'view-deck') {
-      const uniqueDeck = []
-      for (let i = 0; i < this.state.deck.length; i++) {
-        const index = uniqueDeck.findIndex(({ cardNumber }) => cardNumber === this.state.deck[i].cardNumber)
-        if (index !== -1) {
-          uniqueDeck[index].copies++
-        }
-        else {
-          uniqueDeck.push(Object.assign({}, this.state.deck[i], {copies: 1}))
-        }
-      }
-      this.setState({
-        uniqueCardsDeck: uniqueDeck
-      })
       document.querySelector('#cards-and-packs-buttons').classList.add('invisible')
       document.querySelector('#view-deck').classList.add('hidden')
       document.querySelector('#return').classList.remove('hidden')
@@ -97,17 +91,62 @@ export default class App extends Component {
   }
 
   handleCardListClick({ target }) {
-    if (target.closest('div') === null ||
-      !target.closest('div').hasAttribute('card-number') ||
-      this.state.deck.length === 50) return
+    if (target.closest('select')) return
+    if (target.closest('div') === null || !target.closest('div').hasAttribute('card-number')) return
+    if (this.state.deck.reduce((sum, { copies }) => sum + copies, 0) === 50) return
     if (target.closest('div').getAttribute('card-type') === 'Climax' &&
-      this.state.deck.filter(({ cardType }) => cardType === 'Climax').length === 8) return
+      this.state.deck.reduce((sum, card) => card.cardType === 'Climax' ? sum + card.copies : sum, 0) === 8) return
 
     const retrievedCard = boosterPacksList[boosterPacksList.findIndex(({ expansion }) => expansion === target.closest('div').getAttribute('expansion'))].cards.find(({ cardNumber }) => cardNumber === target.closest('div').getAttribute('card-number'))
-    if (this.state.deck.filter(({ cardName }) => cardName === retrievedCard.cardName).length === 4) return
+    const numberOfSameCardNames = this.state.deck.reduce((sum, card) => card.cardName === retrievedCard.cardName ? sum + card.copies : sum, 0)
+    if (numberOfSameCardNames === 4) return
+
+    const deckIndex = this.state.deck.findIndex(({ cardName, cardNumber }) => cardName === retrievedCard.cardName && cardNumber === retrievedCard.cardNumber)
+    if (deckIndex === -1) {
+      retrievedCard['copies'] = 1
+      this.setState({
+        deck: [...this.state.deck, retrievedCard]
+      })
+      return
+    }
+
+    const updateDeck = [...this.state.deck]
+    updateDeck[deckIndex].copies = updateDeck[deckIndex].copies + 1
     this.setState({
-      deck: [...this.state.deck, retrievedCard]
+      deck: updateDeck
     })
+  }
+
+  handleSelectChange({ target }) {
+    const retrievedCard = this.state.deck.find(({ cardNumber }) => cardNumber === target.closest('div').getAttribute('card-number'))
+    if (target.value === '0') {
+      const editedDeck = [...this.state.deck]
+      const editedCardList = [...this.state.cards]
+      editedDeck.splice(editedDeck.findIndex(({ cardNumber }) => cardNumber === retrievedCard.cardNumber), 1)
+      editedCardList[editedCardList.findIndex(({ cardNumber }) => cardNumber === retrievedCard.cardNumber)].copies = 0
+      this.setState({
+        deck: editedDeck,
+        cards: editedCardList
+      })
+    }
+    else {
+      if (this.state.deck.reduce((sum, { copies }) => sum + copies, 0) - retrievedCard.copies + Number(target.value) > 50) return
+      if (this.state.deck.reduce((sum, card) => card.cardName === retrievedCard.cardName ? sum + card.copies : sum, 0) - retrievedCard.copies + Number(target.value) > 4) return
+      if (retrievedCard.cardType === 'Climax' && this.state.deck.reduce((sum, { cardType }) => cardType === 'Climax', 0) - retrievedCard.copies + Number(target.value <= 8)) {
+        const editedDeck = [...this.state.deck]
+        editedDeck[editedDeck.findIndex(({ cardNumber }) => cardNumber === retrievedCard.cardNumber)].copies = Number(target.value)
+        this.setState({
+          deck: editedDeck
+        })
+      }
+      else {
+        const editedDeck = [...this.state.deck]
+        editedDeck[editedDeck.findIndex(({ cardNumber }) => cardNumber === retrievedCard.cardNumber)].copies = Number(target.value)
+        this.setState({
+          deck: editedDeck
+        })
+      }
+    }
   }
 
   render() {
@@ -125,10 +164,12 @@ export default class App extends Component {
           <CardListSection
             cards={this.state.cards}
             handleClick={this.handleCardListClick}
+            handleChange={this.handleSelectChange}
           />
         </div>
         <DeckSection
-          deck={this.state.uniqueCardsDeck}
+          deck={this.state.deck}
+          handleChange={this.handleSelectChange}
         />
       </div>
     )

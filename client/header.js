@@ -15,19 +15,19 @@ export default function Header({ deck, handleClick }) {
       <div id="card-count-section">
         <div className="deck-column-1-of-4">
           <p>Character</p>
-          <p>{deck.filter(({ cardType }) => cardType === 'Character').length}</p>
+          <p>{deck.reduce((sum, { copies, cardType }) => cardType === 'Character' ? sum + copies : sum, 0)}</p>
         </div>
         <div className="deck-column-2-of-4">
           <p>Event</p>
-          <p>{deck.filter(({ cardType }) => cardType === 'Event').length}</p>
+          <p>{deck.reduce((sum, { copies, cardType }) => cardType === 'Event' ? sum + copies : sum, 0)}</p>
         </div>
         <div className="deck-column-3-of-4">
           <p>Climax</p>
-          <p>{deck.filter(({ cardType }) => cardType === 'Climax').length}</p>
+          <p>{deck.reduce((sum, { copies, cardType }) => cardType === 'Climax' ? sum + copies : sum, 0)}</p>
         </div>
         <div className="deck-column-4-of-4">
           <p>Card Count</p>
-          <p>{deck.length + '/50'}</p>
+          <p>{deck.reduce((sum, { copies }) => sum + copies, 0) + '/50'}</p>
         </div>
       </div>
     </header>

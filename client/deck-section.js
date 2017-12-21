@@ -1,8 +1,8 @@
 import React from 'react'
-const renderCards = ({ cardName, cardNumber, copies, cardType, expansion, rarity, picture }, index) =>
+const renderCards = ({ cardName, cardNumber, cardType, copies, expansion, rarity, picture }, index) =>
   <div
     key={index}
-    className={cardType === 'Climax' ? 'deck-climax-card-icons' : 'deck-card-icons'}
+    className={cardType === 'Climax' ? 'climax-card-icons' : 'card-icons'}
     card-number={cardNumber}
     card-type={cardType}
     expansion={expansion}>
@@ -12,7 +12,7 @@ const renderCards = ({ cardName, cardNumber, copies, cardType, expansion, rarity
       alt={cardName}
     />
     <p className='card-title'>{cardName + ' (' + rarity + ')'}</p>
-    <select className='select-bar' defaultValue={copies}>
+    <select className='select-bar' value={copies} readOnly='readonly'>
       <option value='0'>0</option>
       <option value='1'>1</option>
       <option value='2'>2</option>
@@ -21,9 +21,9 @@ const renderCards = ({ cardName, cardNumber, copies, cardType, expansion, rarity
     </select>
   </div>
 
-export default function DeckSection({ deck }) {
+export default function DeckSection({ deck, handleChange }) {
   return (
-    <section id='deck-section' className='hidden'>
+    <section id='deck-section' className='hidden' onChange={handleChange}>
       <div>
         <h1 className='card-headers'>Level 0</h1>
         {

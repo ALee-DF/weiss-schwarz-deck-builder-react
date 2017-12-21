@@ -5,6 +5,7 @@ const renderPack = ({ expansion, visual }, index) =>
     className='button-tiles'
     expansion={expansion}>
     <img className='booster-pack-icon' src={visual} />
+    <p className='expansion-title'>{expansion}</p>
   </button>
 
 export default function BoosterPacksSection({ boosterPacksList, handleClick }) {
