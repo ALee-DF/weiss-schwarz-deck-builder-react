@@ -162,6 +162,7 @@ export default class App extends Component {
           <CardListSection
             cards={this.state.cards}
             handleClick={this.handleCardListClick}
+            handleChange={this.handleSelectChange}
           />
         </div>
         <DeckSection

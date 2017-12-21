@@ -21,9 +21,9 @@ const renderCards = ({ cardName, cardNumber, cardType, copies, expansion, rarity
     </select>
   </div>
 
-export default function CardListSection({ cards, handleClick }) {
+export default function CardListSection({ cards, handleChange, handleClick }) {
   return (
-    <section id="card-list-section" className='hidden' onClick={handleClick}>
+    <section id="card-list-section" className='hidden' onClick={handleClick} onChange={handleChange}>
       <div>
         <h1 className='card-headers'>Characters Cards</h1>
         {
