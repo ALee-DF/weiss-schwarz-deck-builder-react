@@ -57,7 +57,6 @@ export default class App extends Component {
           ? card['copies'] = retrievedCard.copies
           : card['copies'] = 0
       })
-      console.log(cardList)
       this.setState({
         cards: cardList
       })
@@ -122,9 +121,12 @@ export default class App extends Component {
     const retrievedCard = this.state.deck.find(({ cardNumber }) => cardNumber === target.closest('div').getAttribute('card-number'))
     if (target.value === '0') {
       const editedDeck = [...this.state.deck]
+      const editedCardList = [...this.state.cards]
       editedDeck.splice(editedDeck.findIndex(({ cardNumber }) => cardNumber === retrievedCard.cardNumber), 1)
+      editedCardList[editedCardList.findIndex(({ cardNumber }) => cardNumber === retrievedCard.cardNumber)].copies = 0
       this.setState({
-        deck: editedDeck
+        deck: editedDeck,
+        cards: editedCardList
       })
     }
     else {
