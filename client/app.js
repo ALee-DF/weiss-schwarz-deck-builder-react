@@ -45,13 +45,21 @@ export default class App extends Component {
   handleViewsClick({ target }) {
     if (target.closest('button') === null) return
     if (target.closest('button').id === 'view-cards') {
+      const cardList = this.state.selectedPacks.reduce((cards, selectedExpansion) => {
+        return [
+          ...cards,
+          ...boosterPacksList[boosterPacksList.findIndex(({ expansion }) => expansion === selectedExpansion)].cards
+        ]
+      }, [])
+      cardList.forEach(card => {
+        const retrievedCard = this.state.deck.find(deckCard => deckCard.cardNumber === card.cardNumber)
+        retrievedCard
+          ? card['copies'] = retrievedCard.copies
+          : card['copies'] = 0
+      })
+      console.log(cardList)
       this.setState({
-        cards: this.state.selectedPacks.reduce((cards, selectedExpansion) => {
-          return [
-            ...cards,
-            ...boosterPacksList[boosterPacksList.findIndex(({ expansion }) => expansion === selectedExpansion)].cards
-          ]
-        }, [])
+        cards: cardList
       })
       document.querySelector('#view-cards').classList.add('hidden')
       document.querySelector('#view-packs').classList.remove('hidden')
