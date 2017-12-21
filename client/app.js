@@ -84,6 +84,7 @@ export default class App extends Component {
   }
 
   handleCardListClick({ target }) {
+    if (target.closest('select')) return
     if (target.closest('div') === null || !target.closest('div').hasAttribute('card-number')) return
     if (this.state.deck.reduce((sum, { copies }) => sum + copies, 0) === 50) return
     if (target.closest('div').getAttribute('card-type') === 'Climax' &&
