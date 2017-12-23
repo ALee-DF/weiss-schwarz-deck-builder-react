@@ -122,17 +122,7 @@ export default class App extends Component {
     if (!retrievedCard) {
       retrievedCard = this.state.cards.find(({ cardNumber }) => cardNumber === target.closest('div').getAttribute('card-number'))
     }
-    // if (!retrievedCard) {
-    //   const backupCard = this.state.cards.find(({ cardNumber }) => cardNumber === target.closest('div').getAttribute('card-number'))
-    //   backupCard.copies = Number(target.value)
-    //   const editedCardList = [...this.state.cards]
-    //   editedCardList[editedCardList.findIndex(({ cardNumber }) => cardNumber === backupCard.cardNumber)].copies = Number(target.value)
-    //   this.setState({
-    //     deck: [...this.state.deck, backupCard],
-    //     cards: editedCardList
-    //   })
-    //   return
-    // }
+
     if (target.value === '0') {
       const editedDeck = [...this.state.deck]
       const editedCardList = [...this.state.cards]
